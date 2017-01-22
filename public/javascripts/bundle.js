@@ -44,6 +44,15 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	__webpack_require__(1);
+	__webpack_require__(3);
+	(function webpackMissingModule() { throw new Error("Cannot find module \"SelfBundle.js\""); }());
+
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 	/*練習問題の部分がバンドルから消えるかの実験
 	const crypto = require('crypto');
@@ -51,13 +60,13 @@
 	  '<p>' + crypto.randomBytes(8).toString('hex') + '　　←←←はcryptoを使ったランダムな１６進数'+'</p>');
 	  */
 	'use strict';
-	const dc = __webpack_require__(1);
+	const dc = __webpack_require__(2);
 	document.writeln(
 	  '攻撃力 100, 防御 50, 防御貫通 30 のダメージは、' +
 	  dc.effectiveDamage(100, 50, 30) + '');
 
 /***/ },
-/* 1 */
+/* 2 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -101,6 +110,12 @@
 	module.exports = {
 	  effectiveDamage: effectiveDamage
 	};
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	document.write("Hello webpack");
 
 /***/ }
 /******/ ]);
